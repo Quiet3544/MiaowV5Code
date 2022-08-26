@@ -12,7 +12,9 @@
 // [Name]               [Type]        [Port(s)]
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
+
 #include "functions.h"
+
 void auton(){
 
 }
