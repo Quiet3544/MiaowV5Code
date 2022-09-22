@@ -8,9 +8,8 @@ void brakeRight();
 void brakeLeft();
 ///////////////////////////////////////////
 void driveFunc();
-void intakeFunc();
+void intakeAndRollerFunc();
 void shooterWheelToggle();
-void shooterWheelFunc();
 
 ///////////////////////////////////////////
 // auton functions

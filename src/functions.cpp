@@ -68,14 +68,14 @@ void shooterWheelToggle(){
     shooterWheelOnOff = false;
   }
 }
-void shooterWheelFunc(){
-  master.ButtonX.pressed(shooterWheelToggle);
-  if(shooterWheelOnOff == true){
-    shooterWheel.vex::motor::spin(vex::fwd,80,vex::pct);
-  }else{
-    shooterWheel.stop(vex::coast);
-  }
-}
+// void shooterWheelFunc(){
+//   master.ButtonX.pressed(shooterWheelToggle);
+//   if(shooterWheelOnOff == true){
+//     shooterWheel.vex::motor::spin(vex::fwd,80,vex::pct);
+//   }else{
+//     shooterWheel.stop(vex::coast);
+//   }
+// }
 
 ///////////////////////////////////////////
 // auton functions

@@ -21,8 +21,7 @@ void auton(){
 void driver(){
   while (true){
     driveFunc();
-    intakeFunc();
-    shooterWheelFunc();
+    intakeAndRollerFunc();
   }
 }
 
