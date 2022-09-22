@@ -1,17 +1,22 @@
 #include "variables.h"
 
+//input
 vex::competition Competition;
 vex::controller master = vex::controller();
 vex::brain Brain = vex::brain();
 
-vex::motor driveBackRight = vex::motor(vex::PORT10);
-vex::motor driveFrontRight = vex::motor(vex::PORT20);
-vex::motor driveBackLeft = vex::motor(vex::PORT1);
-vex::motor driveFrontLeft = vex::motor(vex::PORT11);
+//drive
+// to flip motors, put "true" after port(n)
+// for example: vex::motor(vex::PORT1, true);
+vex::motor driveBackRight = vex::motor(vex::PORT1);
+vex::motor driveMiddleRight = vex::motor(vex::PORT11);
+vex::motor driveFrontRight = vex::motor(vex::PORT2);
 
-vex::motor intakeRight = vex::motor(vex::PORT19);
-vex::motor intakeLeft = vex::motor(vex::PORT12);
+vex::motor driveBackLeft = vex::motor(vex::PORT10);
+vex::motor driveMiddleLeft = vex::motor(vex::PORT20);
+vex::motor driveFrontLeft = vex::motor(vex::PORT9);
 
-vex::motor shooterWheel = vex::motor(vex::PORT18);
-extern vex::pneumatics shooterGate;
-vex::pneumatics shooterGate = vex::pneumatics(Brain.ThreeWirePort.A);
+//misc
+vex::motor intakeAndRoller = vex::motor(vex::PORT19);
+
+vex::motor cata = vex::motor(vex::PORT6);
