@@ -43,39 +43,44 @@ void driveFunc(){
   }
 }
 // creating a toggle function for the intake
-bool intakeOnOff;
-void intakeToggle(){
-  if(intakeOnOff == false){
-    intakeOnOff = true;
-  }else{
+bool intakeOnOff = false;
+void intakeAndRollerSwitch(){
+  if(intakeOnOff){
     intakeOnOff = false;
+  }else{
+    intakeOnOff = true;
   }
 }
 void intakeAndRollerFunc(){
-  master.ButtonRight.pressed(intakeToggle); // when the button is pressed it checks intakeToggle() and based on that stop or spin motors
-  if(intakeOnOff == false){
+  master.ButtonRight.pressed(intakeAndRollerSwitch); // when the button is pressed it checks intakeToggle() and based on that stop or spin motors
+  if(intakeOnOff == true){
     intakeAndRoller.vex::motor::spin(vex::fwd,80,vex::pct);
   }else{
     intakeAndRoller.stop(vex::coast);
   }
 }
-//doing same thing but for the shooter
-bool shooterWheelOnOff;
-void shooterWheelToggle(){
-  if(shooterWheelOnOff == false){
-    shooterWheelOnOff = true;
+//doing same thing but for the random port
+bool randomPortOnOff;
+void RandomPortSwitch(){
+  if(randomPortOnOff){
+    randomPortOnOff = false;
   }else{
-    shooterWheelOnOff = false;
+    randomPortOnOff = true;
   }
 }
-// void shooterWheelFunc(){
-//   master.ButtonX.pressed(shooterWheelToggle);
-//   if(shooterWheelOnOff == true){
-//     shooterWheel.vex::motor::spin(vex::fwd,80,vex::pct);
-//   }else{
-//     shooterWheel.stop(vex::coast);
-//   }
-// }
+void randomPortFunc(float anglee, float delayPeriod){
+  master.ButtonX.pressed(RandomPortSwitch);
+  randomPort.vex::motor::resetRotation();
+  float originalPosition = randomPort.vex::motor::position(vex::deg);
+  
+  if(randomPortOnOff == true){
+    randomPort.spinToPosition(anglee, vex::deg,true);
+    vex::task::sleep(delayPeriod);
+    randomPort.spinToPosition(originalPosition, vex::deg,true);
+  }else{
+    randomPort.stop(vex::coast);
+  }
+}
 
 ///////////////////////////////////////////
 // auton functions

@@ -22,6 +22,8 @@ void driver(){
   while (true){
     driveFunc();
     intakeAndRollerFunc();
+    randomPortFunc(90,5000); /* first number is to what degree (this can stretch beyond 360 degrees),
+     second number is delay period (set to milliseconds. 1000 milliseconds = 1 second).*/
   }
 }
 

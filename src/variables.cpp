@@ -6,7 +6,7 @@ vex::controller master = vex::controller();
 vex::brain Brain = vex::brain();
 
 //drive
-// to flip motors, put "true" after port(n)
+// to reverse motors, put "true" after port(n)
 // for example: vex::motor(vex::PORT1, true);
 vex::motor driveBackRight = vex::motor(vex::PORT1);
 vex::motor driveMiddleRight = vex::motor(vex::PORT11);
@@ -20,3 +20,4 @@ vex::motor driveFrontLeft = vex::motor(vex::PORT9);
 vex::motor intakeAndRoller = vex::motor(vex::PORT19);
 
 vex::motor cata = vex::motor(vex::PORT6);
+vex::motor randomPort = vex::motor(vex::PORT7);

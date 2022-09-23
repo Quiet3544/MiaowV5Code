@@ -9,8 +9,7 @@ void brakeLeft();
 ///////////////////////////////////////////
 void driveFunc();
 void intakeAndRollerFunc();
-void shooterWheelToggle();
-
+void randomPortFunc(float anglee, float delayPeriod);
 ///////////////////////////////////////////
 // auton functions
 void driveFwd();

@@ -18,7 +18,7 @@ extern vex::motor driveFrontLeft;
 
 //misc
 extern vex::motor intakeAndRoller;
-
 extern vex::motor cata;
+extern vex::motor randomPort;
 
 #endif
