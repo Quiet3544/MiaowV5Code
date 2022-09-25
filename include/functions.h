@@ -1,21 +1,15 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 #include "variables.h"
-///////////////////////////////////////////
 //Brake functions/
-void brakeDrive();
+void brakeDrive(vex::brakeType braket);
 void brakeRight();
 void brakeLeft();
-///////////////////////////////////////////
+// Driver controlled functions
 void driveFunc();
 void intakeAndRollerFunc();
-void randomPortFunc(float anglee, float delayPeriod);
+void extensionFunc(float anglee, float delayPeriod);
 ///////////////////////////////////////////
-// auton functions
-void driveFwd();
-void driveBwd();
-void driveTurnR();
-void driveTurnL();
-///////////////////////////////////////////
+
 
 #endif

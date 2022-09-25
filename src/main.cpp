@@ -1,28 +1,32 @@
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
-/*    Author:       C:\Users\18awdaha                                         */
+/*    Author:       C:\Users\                                                 */
 /*    Created:      Fri Jul 01 2022                                           */
 /*    Description:  V5 project                                                */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
+#include "autonomous.h" // contains all previous files
 
-// ---- START VEXCODE CONFIGURED DEVICES ----
-// Robot Configuration:
-// [Name]               [Type]        [Port(s)]
-// ---- END VEXCODE CONFIGURED DEVICES ----
+vex::competition Competition;
 
-
-#include "functions.h"
-
+void preAuton(){
+    extension.resetPosition();
+}
 void auton(){
-
+  driveFwd();
+  vex::task::sleep(1000);
+  brakeDrive(vex::brake); 
+  rollerTurnAuton();
+  vex::task::sleep(500);
+  intakeAndRoller.stop(vex::coast);
 }
 void driver(){
   while (true){
+    preAuton();
     driveFunc();
     intakeAndRollerFunc();
-    randomPortFunc(90,5000); /* first number is to what degree (this can stretch beyond 360 degrees),
+    extensionFunc(90,5000); /* first number is to what degree (this can stretch beyond 360 degrees),
      second number is delay period (set to milliseconds. 1000 milliseconds = 1 second).*/
   }
 }
