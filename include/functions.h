@@ -8,7 +8,7 @@ void brakeLeft();
 // Driver controlled functions
 void driveFunc();
 void intakeAndRollerFunc();
-void extensionFunc(float anglee, float delayPeriod);
+void expansionFunc(float anglee, float delayPeriod);
 ///////////////////////////////////////////
 
 

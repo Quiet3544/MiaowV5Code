@@ -11,7 +11,7 @@
 vex::competition Competition;
 
 void preAuton(){
-    extension.resetPosition();
+    expansion.resetPosition();
 }
 void auton(){
   driveFwd();
@@ -26,7 +26,7 @@ void driver(){
     preAuton();
     driveFunc();
     intakeAndRollerFunc();
-    extensionFunc(90,5000); /* first number is to what degree (this can stretch beyond 360 degrees),
+    expansionFunc(90,5000); /* first number is to what degree (this can stretch beyond 360 degrees),
      second number is delay period (set to milliseconds. 1000 milliseconds = 1 second).*/
   }
 }

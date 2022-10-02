@@ -58,21 +58,21 @@ void intakeAndRollerFunc(){
   }
 }
 //doing same thing but for the random port
-bool extensionOnOff;
-void extensionSwitch(){
-  if(extensionOnOff){
-    extensionOnOff = false;
+bool expansionOnOff;
+void expansionSwitch(){
+  if(expansionOnOff){
+    expansionOnOff = false;
   }else{
-    extensionOnOff = true;
+    expansionOnOff = true;
   }
 }
-void extensionFunc(float anglee, float delayPeriod){
-  master.ButtonX.pressed(extensionSwitch);
-  float originalPosition = extension.position(vex::deg);
+void expansionFunc(float anglee, float delayPeriod){
+  master.ButtonX.pressed(expansionSwitch);
+  float originalPosition = expansion.position(vex::deg);
   
-  while(extensionOnOff){
-    extension.spinToPosition(anglee, vex::deg,true);
+  while(expansionOnOff){
+    expansion.spinToPosition(anglee, vex::deg,true);
     vex::task::sleep(5000);
-    extension.spinToPosition(originalPosition, vex::deg,true);
+    expansion.spinToPosition(originalPosition, vex::deg,true);
   }
 }
