@@ -44,15 +44,12 @@ void driveFunc(){
     driveFrontLeft.spin(vex::fwd,lefts,vex::volt);
   }
 }
-
+//roler func
 void intakeAndRollerFunc(){
   if(master.ButtonL1.pressing()){
-    intakeAndRoller.spin(vex::fwd,80,vex::pct);    
-  }else{
-    intakeAndRoller.stop(vex::coast);
-  }
-  if(master.ButtonL2.pressing()){
-  intakeAndRoller.spin(vex::fwd,-80,vex::pct);
+    intakeAndRoller.spin(vex::fwd,80,vex::pct);
+  }else if(master.ButtonL2.pressing()){
+    intakeAndRoller.spin(vex::fwd,-80,vex::pct);
   }else{
     intakeAndRoller.stop(vex::coast);
   }

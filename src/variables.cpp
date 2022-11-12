@@ -13,13 +13,13 @@ vex::brain Brain = vex::brain();
 
 // to change motors colour/ration, put ",vex::gearSetting::ratio[desired rato]"
 // for example: vex::motor(vex::PORT1,,vex::gearSetting::ratio6_1);
-vex::motor driveBackRight = vex::motor(vex::PORT1,vex::gearSetting::ratio6_1,true);
-vex::motor driveMiddleRight = vex::motor(vex::PORT11,vex::gearSetting::ratio6_1,true);
-vex::motor driveFrontRight = vex::motor(vex::PORT2,vex::gearSetting::ratio6_1,true);
+vex::motor driveBackRight = vex::motor(vex::PORT1,vex::gearSetting::ratio6_1);
+vex::motor driveMiddleRight = vex::motor(vex::PORT11,vex::gearSetting::ratio6_1);
+vex::motor driveFrontRight = vex::motor(vex::PORT2,vex::gearSetting::ratio6_1);
 
-vex::motor driveBackLeft = vex::motor(vex::PORT10,vex::gearSetting::ratio6_1);
-vex::motor driveMiddleLeft = vex::motor(vex::PORT20,vex::gearSetting::ratio6_1);
-vex::motor driveFrontLeft = vex::motor(vex::PORT9,vex::gearSetting::ratio6_1);
+vex::motor driveBackLeft = vex::motor(vex::PORT10,vex::gearSetting::ratio6_1,true);
+vex::motor driveMiddleLeft = vex::motor(vex::PORT20,vex::gearSetting::ratio6_1,true);
+vex::motor driveFrontLeft = vex::motor(vex::PORT9,vex::gearSetting::ratio6_1,true);
 
 //misc
 vex::motor intakeAndRoller = vex::motor(vex::PORT12);
